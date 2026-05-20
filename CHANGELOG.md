@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.8+fv.1] - 2026-05-20
+
+Fork (fv-forgevision) 独自拡張リリース。上流 `0.1.8` をベースに Multi-Agent Mode Extension を追加。
+
+### Added
+- Multi-Agent Mode Extension (opt-in): AI-DLC を Multi-Agent で自動化する Extension
+  - TEAM-01..08: 横断的調整制約 (Unit ownership / data store 排他書込 / Contract-First / 独立 test / audit prefix / per-stage test / Sync Gate / interface 伝播)
+  - MAGENT-01..06: Orchestrator/Sub-Agent プロトコル (役割定義 / briefing / 書込制御 / scope 隔離 / completion contract JSON / 通信プロトコル)
+  - MAGENT-04 worktree isolation: 並列起動時のみ MUST、逐次/単独起動時は SHOULD
+  - Appendix A briefing テンプレートに Active Extensions セクションを追加し、他 Extension 有効化状態を Sub-Agent に伝播
+- 既存 Extension 機構 (`extensions/<category>/<name>/`) に乗せ、core-workflow.md と aidlc-state.md スキーマは変更なし
+
 ## [0.1.8] - 2026-04-20
 
 ### Changed
